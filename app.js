@@ -34,6 +34,8 @@ db.serialize(function () {
 	//because you may entering the info many times in the login form.
 
 	db.run("INSERT INTO user VALUES ('aa', 'aa', 'User of an app with vulnerable source code')");
+
+	db.run("INSERT INTO user VALUES ('bb', 'bb', '2nd User of an app with vulnerable source code')");
 });
 
 
