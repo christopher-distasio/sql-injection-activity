@@ -15,12 +15,12 @@
 // to perform the SQL injection attack.
 
 
-const sqlite3 = require('sqlite3').verbose();
+
 const http = require('http'),
 path = require('path'),
 express = require('express'),
 bodyParser = require('body-parser');
-
+const sqlite3 = require('sqlite3').verbose();
 const app = express();
 app.use(express.static('.'))
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -74,10 +74,10 @@ app.post('/login', function (req, res) {
 		} else if (!row) {
 			res.redirect("/index.html#unauthorized");
 		} else {
-			res.send(
-			"Hello <b>" + row.title + '!</b><br /> This file contains all your secret data: <br /><br /> SECRETS <br /><br /> MORE SECRETS <br /><br /> <a href="/index.html">Go back to login</a>'
-			)
-			// res.send('Login successful')
+			// res.send(
+			// "Hello <b>" + row.title + '!</b><br /> This file contains all your secret data: <br /><br /> SECRETS <br /><br /> MORE SECRETS <br /><br /> <a href="/index.html">Go back to login</a>'
+			// )
+			
 
 
 			// NOTES:
